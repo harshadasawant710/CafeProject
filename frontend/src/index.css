@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.regHeading{
+  text-align: center;
+}
+
+#navbar{
+  /* background: linear-gradient(to right, white, #09193e); */
+  position: sticky;
+  top:0px;
+  z-index: 1000; 
+}
+
+#navbar ul li a{
+text-decoration: none;
+}
+
+.addedFood{
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#sidebar{
+  background: white;
+  height: 100vh;
+  box-shadow:2px 3px 3px 2px rgb(103,99,99)
+}
+
+/* #adminbutton{
+  color: brown;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  height: 100vh;
+  text-decoration: none !important;
+} */
+
+#sidebar a{
+  text-decoration: none;
+}
+
+
+#admininsertform{
+  text-align: center;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+#myimg{
+  width: 80px;
+}
+
+#adminbutton {
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  z-index: 1000; /* Ensure it stays above other elements */
+  background-color: brown; /* Green background */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+#adminbutton:hover {
+  transform: scale(1.2); /* Slightly enlarge the button on hover */
+  background-color: burlywood; /* Darker green on hover */
+  color: brown;
+}
+
+
+.p-body{
+  font-family:'Times New Roman', Times, serif;
+}
+
+.nav-link {
+  padding: 4px 0;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 6px auto 0 auto;
+}
+
+/* .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: black;
+  transition: 0.4s ease-out;
+} */
+
+.nav-link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.userName{
+  color: blue;
+}
+
+.active-link {
+  color: red; /* Change color for active links */
+  font-weight: bold; /* Add bold text */
+  border-bottom: 2px solid red; /* Add an underline effect */
+}
+
+.fixed {
+  position: fixed;
+  background-color: white;
+  width: 100%
+}
+
+.carousel-font{
+  margin: 130px 10px;
+  font-size: 60px;
+}
+
+/* max width 768px*/
+@media (max-width: 768px) {
+  .carousel-font {
+    margin: 120px 5px;
+    font-size: 40px;
+  }
+}
