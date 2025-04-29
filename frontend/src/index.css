@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; */
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
@@ -12,31 +13,31 @@ code {
     monospace;
 }
 
-.regHeading{
+.regHeading {
   text-align: center;
 }
 
-#navbar{
+#navbar {
   /* background: linear-gradient(to right, white, #09193e); */
   position: sticky;
-  top:0px;
-  z-index: 1000; 
+  top: 0px;
+  z-index: 1000;
 }
 
-#navbar ul li a{
-text-decoration: none;
+#navbar ul li a {
+  text-decoration: none;
 }
 
-.addedFood{
+.addedFood {
   color: white;
   font-weight: 500;
   font-size: 20px;
 }
 
-#sidebar{
+#sidebar {
   background: white;
   height: 100vh;
-  box-shadow:2px 3px 3px 2px rgb(103,99,99)
+  box-shadow: 2px 3px 3px 2px rgb(103, 99, 99)
 }
 
 /* #adminbutton{
@@ -48,27 +49,31 @@ text-decoration: none;
   text-decoration: none !important;
 } */
 
-#sidebar a{
+#sidebar a {
   text-decoration: none;
 }
 
 
-#admininsertform{
+#admininsertform {
   text-align: center;
   font-weight: 500;
   margin: 30px 0;
 }
 
-#myimg{
+#myimg {
   width: 80px;
 }
 
-#adminbutton {
+.adminbutton {
   position: fixed;
-  bottom: 30px; /* Distance from the bottom */
-  right: 30px; /* Distance from the right */
-  z-index: 1000; /* Ensure it stays above other elements */
-  background-color: brown; /* Green background */
+  bottom: 30px;
+  /* Distance from the bottom */
+  right: 30px;
+  /* Distance from the right */
+  z-index: 1000;
+  /* Ensure it stays above other elements */
+  background-color: brown;
+  /* Green background */
   color: white;
   padding: 10px 15px;
   border-radius: 50px;
@@ -78,16 +83,18 @@ text-decoration: none;
   transition: transform 0.2s ease-in-out;
 }
 
-#adminbutton:hover {
-  transform: scale(1.2); /* Slightly enlarge the button on hover */
-  background-color: burlywood; /* Darker green on hover */
+.adminbutton:hover {
+  transform: scale(1.2);
+  /* Slightly enlarge the button on hover */
+  background-color: burlywood;
+  /* Darker green on hover */
   color: brown;
 }
 
 
-.p-body{
+/* .p-body{
   font-family:'Times New Roman', Times, serif;
-}
+} */
 
 .nav-link {
   padding: 4px 0;
@@ -119,14 +126,17 @@ button:focus {
   box-shadow: none !important;
 }
 
-.userName{
-  color: blue;
+.userName {
+  color: #27AAE1;
 }
 
 .active-link {
-  color: red; /* Change color for active links */
-  font-weight: bold; /* Add bold text */
-  border-bottom: 2px solid red; /* Add an underline effect */
+  color: red;
+  /* Change color for active links */
+  font-weight: bold;
+  /* Add bold text */
+  border-bottom: 2px solid red;
+  /* Add an underline effect */
 }
 
 .fixed {
@@ -135,7 +145,7 @@ button:focus {
   width: 100%
 }
 
-.carousel-font{
+.carousel-font {
   margin: 130px 10px;
   font-size: 60px;
 }
@@ -146,4 +156,42 @@ button:focus {
     margin: 120px 5px;
     font-size: 40px;
   }
+}
+
+/* floating Button allOver */
+@keyframes floatButton {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.homeButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: #27AAE1;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(120, 115, 245, 0.4);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  animation: floatButton 3s ease-in-out infinite;
+  font-family:"Calibrri";
+}
+
+.homeButton:hover {
+  transform: scale(1.1) translateY(-3px);
+  background: #27AAE1;;
+  box-shadow: 0 12px 32px rgba(120, 115, 245, 0.6);
 }

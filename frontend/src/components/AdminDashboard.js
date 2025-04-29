@@ -43,7 +43,7 @@ const AdminDashboard = () => {
   return (
     <div className='container-fluid'>
       <div className='row mt-5'>
-      <Link to='/AdminInsertForm'><h6 id='adminbutton'>Admin Add Form</h6></Link>
+      <Link to='/AdminInsertForm'><h6 className='adminbutton'>Admin Add Form</h6></Link>
 
         {/* <div className='col-md-2' id='sidebar'>
           <Link to='/AdminInsertForm'><h6 id='adminbutton'>Admin Add Form</h6></Link>

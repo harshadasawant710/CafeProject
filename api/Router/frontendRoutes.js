@@ -3,6 +3,7 @@ const FoodC = require("../Controllers/FoodControllers")
 const RegC = require("../Controllers/RegControllers")
 const BookC = require("../Controllers/BookingControllers")
 
+
 const multer = require("multer")
 
 const Storage = multer.diskStorage({
@@ -33,6 +34,10 @@ router.put("/adminupdateimage/:id",upload.single("pimg"),FoodC.adminfinalupdateI
 router.put("/adminupdate/:id", FoodC.adminfinalupdate)
 router.get("/usershowlist", FoodC.usershowlist)
 router.post("/cart",FoodC.addtocartpage)
-//router.post("/booktable", BookC.bookTable)
+router.post("/booktable", BookC.bookTable)
+router.get("/mybookings", BookC.getUserBookings);
+router.put("/booktable/:bookingId/visit-status", BookC.updateVisitStatus);
+
+
 
 module.exports = router;

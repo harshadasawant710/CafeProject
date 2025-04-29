@@ -57,7 +57,7 @@ const FoodProducts = () => {
   return (
     <>
       <div >
-        <div className='row my-5' style={{ justifyContent: 'center', margin: '10px auto', width: '90%' }}>
+        <div className='row my-1' style={{ justifyContent: 'center', margin: '10px auto', width: '90%' }}>
           {product
             // .filter((el)=> el.PName.toLowerCase().includes(inputtext))
             .map((product, key) => (

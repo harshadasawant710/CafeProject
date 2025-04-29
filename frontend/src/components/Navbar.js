@@ -35,7 +35,7 @@ const Navbar = () => {
                                 >
                                     Cafe Cloud
                                 </div> */}
-                                <img src='/cafeCloud.png' alt="Cafe Cloud" style={{ width: '85px', height: '60px' }} />
+                                <img src='/cafeCloud1.png' alt="Cafe Cloud" style={{ width: '80px', height: '50px' }} />
                             </a>
                             <button
                                 className="navbar-toggler"
@@ -84,8 +84,6 @@ const Navbar = () => {
                                             <NavLink className="nav-link" aria-current="page" to="/LogIn">LogIn</NavLink>
                                         </li>
                                     )}
-
-
                                 </ul>
                             </div>
                         </div>

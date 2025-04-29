@@ -22,7 +22,7 @@ exports.RegistrationUser = async (req, res) => {
     else {
       res.json({
         status: 401,
-        successMessage: "Error registering user"
+        successMessage: "Username already exists. Please try another."
       })
     }
 
@@ -43,36 +43,33 @@ exports.LoginUseForm = async (req, res) => {
   try {
     if (record !== null) {
       const userpasscheck = await bcrypt.compare(password, record.Password)
-      
-      if (userpasscheck) {
 
+      if (userpasscheck) {
         const token = jwt.sign({ username: record.Username }, "your_secret_key", { expiresIn: "1h" });
 
         res.json({
           status: 200,
           apiData: record.Username,
+          token: token, // ✅ now token will reach frontend
           message: `${username} successfully login`
         })
-      }
-      else {
+      } else {
         res.json({
           status: 400,
           message: "oops somthing went wrong..."
         })
       }
-
-    }
-    else{
+    } else {
       res.json({
-        status:400,
-        message:"oops somthing went wrong"
+        status: 400,
+        message: "oops somthing went wrong"
       })
     }
-  }
-  catch(error){
+  } catch(error) {
     res.json({
-      status:401,
-      message:"wrong credientials"
+      status: 401,
+      message: "wrong credientials"
     })
   }
 }
+

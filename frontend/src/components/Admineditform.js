@@ -101,7 +101,7 @@ const Admineditform = () => {
         <div>
             <div className='container-fluid'>
                 <div className='row mt-3'>
-                    <Link to='/Dashboard'><h6 id='adminbutton'>Dashboard</h6></Link>
+                    <Link to='/Dashboard'><h6 className='adminbutton'>Dashboard</h6></Link>
                     {/* <div className='col-md-2' id='sidebar'>
                     <Link to='/Dashboard'><h6 id='adminbutton'>Dashboard</h6></Link>
                 </div> */}
